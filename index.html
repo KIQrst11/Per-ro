@@ -7,7 +7,6 @@
 <title>Per-ro</title>
 
 <script>
-
 function openImg(src) {
     const w = window.open("");
     w.document.write('<img src="'+src+'" style="width:100%;background:#000;">');
@@ -86,23 +85,22 @@ p{
     background:rgba(255,255,255,0.1);
 }
 
-/* PROMO BLOCK */
+/* PROMO */
 .promo-banner{
     margin:15px 0;
     padding:15px;
     border-radius:16px;
-    background: linear-gradient(135deg, rgba(255, 215, 0, 0.18), rgba(255, 140, 0, 0.10));
-    border:1px solid rgba(255, 215, 0, 0.35);
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.18), rgba(99, 102, 241, 0.10));
+    border:1px solid rgba(99, 102, 241, 0.35);
     backdrop-filter:blur(15px);
     text-align:center;
-    animation: glow 2s infinite alternate;
 }
 
 .promo-title{
     font-size:14px;
     font-weight:bold;
     margin-bottom:6px;
-    color:#ffd36a;
+    color:#93c5fd;
 }
 
 .promo-text{
@@ -114,11 +112,6 @@ p{
 .promo-subtext{
     font-size:11px;
     opacity:0.75;
-}
-
-@keyframes glow{
-    from{box-shadow:0 0 10px rgba(255,215,0,0.2);}
-    to{box-shadow:0 0 20px rgba(255,215,0,0.35);}
 }
 
 /* LOADER */
@@ -154,7 +147,6 @@ p{
     transform:scale(1.05);
 }
 
-/* TRUST */
 .trust{
     margin-top:8px;
     font-size:11px;
@@ -168,7 +160,6 @@ p{
     border-radius:16px;
     background:rgba(255,255,255,0.08);
     border:1px solid rgba(255,255,255,0.15);
-    backdrop-filter:blur(15px);
     text-align:left;
 }
 
@@ -228,21 +219,6 @@ p{
 }
 </style>
 
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1479769323473247');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1479769323473247&ev=PageView&noscript=1"
-/></noscript>
 </head>
 
 <body>
@@ -253,46 +229,46 @@ src="https://www.facebook.com/tr?id=1479769323473247&ev=PageView&noscript=1"
 
     <h1>Per-ro</h1>
 
-    <p>🚀 Быстрая установка • Конфиденциальные чаты • Без подписок</p>
+    <p>🚀 Fast installation • Modern social app • Secure communication features</p>
 
     <div class="badges">
-       <span>⚡️ HD Видео</span>
-    <span>🔒 Шифрование</span>
-    <span>📱 Android</span>
+        <span>⚡ High Quality</span>
+        <span>🔒 Secure</span>
+        <span>📱 Android</span>
     </div>
 
     <div class="promo-banner">
-        <div class="promo-title">🎁 Специальное предложение</div>
+        <div class="promo-title">🎁 Early Access</div>
         <div class="promo-text">
-            Для первых 100 пользователей открыт бесплатный премиум-доступ ко всем функциям общения без ограничений.
+            New users get access to premium social features and enhanced communication tools.
         </div>
         <div class="promo-subtext">
-            После установки вы сможете активировать защищенный профиль и начать общение в приватных комнатах.
+            Install the app and explore modern interaction features inside the platform.
         </div>
     </div>
 
     <div class="loader"></div>
 
     <div class="install-banner">
-        <div class="install-title">📲 Как установить</div>
+        <div class="install-title">📲 Installation Guide</div>
         <div class="install-steps">
-            <p>1. Нажмите «Скачать»</p>
-            <p>2. Дождитесь загрузки APK</p>
-            <p>3. Откройте файл</p>
-            <p>4. Разрешите установку из неизвестных источников</p>
+            <p>1. Click download</p>
+            <p>2. Wait for APK file</p>
+            <p>3. Open file</p>
+            <p>4. Allow installation from unknown sources</p>
         </div>
     </div>
 
     <a class="download"
        href="https://github.com/KIQrst11/Persex-app/releases/download/v1.0/PerSex.Online.apk">
-       ⬇ Установить сейчас
+       ⬇ Install Now
     </a>
 
     <div class="trust">
-        ✔ Без вирусов • ✔ Прямое скачивание • ✔ Без регистрации
+        ✔ Direct download • ✔ No registration • ✔ Secure file
     </div>
 
-    <div class="section-title">Скриншоты приложения</div>
+    <div class="section-title">App Screenshots</div>
 
     <div class="gallery">
         <img src="assets/img1.png" onclick="openImg(this.src)">
